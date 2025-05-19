@@ -1,0 +1,29 @@
+TypeScript
+JavaScript with super powers : TypeScript is like a more powerful version of js. it lets you do everything that js does , but it adds some extra feature to make your life easier when writing larger and more complex programs   
+
+npm install -g typescript
+
+npm i -g ts-node
+
+
+Annotations:-
+Annotations are used to specify the data type of a variable, parameter, function return value and other types of values. Annotations help developers catch errors early in development by allowing them to specify what types of values can be assigned to a gicen variable or passed as an argument to a function
+
+string👇🏻
+//let myVar: type = value
+
+let myName: string = "Anirudh Raturi";
+myName = "Another Name";
+console.log(myName);
+
+//ERROR 
+//myName = 12
+
+number👇🏻
+let favNumber: number = 14;
+favNumber += 2;
+console.log(favNumber);
+
+//ERROR 
+//favNumber="Ten";
+
