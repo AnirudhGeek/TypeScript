@@ -1,9 +1,13 @@
 TypeScript
 JavaScript with super powers : TypeScript is like a more powerful version of js. it lets you do everything that js does , but it adds some extra feature to make your life easier when writing larger and more complex programs   
 
-npm install -g typescript
+npm install typescript
 
-npm i -g ts-node
+npm init
+
+npx tsc --init
+
+npx tsc -b
 
 
 Annotations:-
@@ -27,3 +31,77 @@ console.log(favNumber);
 //ERROR 
 //favNumber="Ten";
 
+
+
+STEPS FOR RUNNING THE TypeScript FILE 
+
+1=> CONVERTINT TypeScript FILE  INTO JS FILE 
+    there are many compilers like tsc, esbuild,swc but here we will use tsc 
+
+    npx tsc -b   => TypeScript build
+    node index.js
+
+
+HOW TO MAKE SEPERATE FOLDERS FOR THE JavaScript FILES THAT ARE GENERATED WHILE COMPILING TypeScript FILES 
+
+=> inside tsConfig.json add rootDir and outDir 
+    rootDir for storing tsc files and outDir will stored genrated js files automatically inside it 
+
+    inside tsConfign add
+        "rootDir" : "./src"
+        "outDir" : "./dist"
+
+
+
+HOW TO DEFINE OBJECTS IN TypeScript
+function greet(user: {
+    name: string,
+    age: number
+}){
+    console.log("hello" + user.name)
+}
+greet({
+    name : "Anirudh",
+    age : 20
+})
+
+
+//types and interfaces
+it is used with complex objects so that we dont have to repeat our code again and again 
+ //types
+ type UserType = {
+    firstName : string,
+    lastName : string, 
+    age : number
+ }
+
+ //interface 
+ interface UserType = {
+    firstName : string,
+    lastName : string, 
+    age : number
+ }
+
+
+
+ using interface in react 
+ 
+ interface TodoType{
+    title : string,
+    description : string,
+    done : boolean
+ }
+
+ interface TodoInput{
+    todo : TodoType
+ }
+
+ function Todo(props: TodoInput){
+
+ }
+
+ <Todo todo = {{
+    title = "Go to gym",
+    description = "Go to gym at 8-10",
+    done = false
+ }} />
